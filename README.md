@@ -30,3 +30,15 @@ The `answer.sql` file contains queries to:
 ## Files
 - `answer.sql` — SQL queries for all five assignment questions.
 - `README.md` — Project overview, setup instructions, and query descriptions.
+
+
+## Advanced SQL Queries and Aggregations
+
+The `advanced_sql_queries.sql` file contains four queries using aggregate functions and grouping:
+
+1. Total payments per date, sorted newest first and limited to five dates.
+2. Average credit limit grouped by customer name and country.
+3. Total line price (quantity ordered multiplied by price each), grouped by product code and quantity ordered.
+4. Highest payment amount grouped by check number.
+
+Run the script after importing the `sales` database into MySQL.

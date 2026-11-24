@@ -150,3 +150,39 @@ FROM Orders AS o
 INNER JOIN OrderItems AS oi
     ON o.OrderID = oi.OrderID
 ORDER BY o.OrderID, oi.Product;
+
+
+-- =========================================================
+-- MySQL Backup Assignment: mysqldump commands
+-- IMPORTANT: These are terminal commands, not SQL statements.
+-- They are kept as comments in answer.sql because the
+-- assignment specifically requires this file.
+-- Run them in your system terminal, not in MySQL Workbench's
+-- SQL query editor.
+-- =========================================================
+
+-- Question 1: Create a complete backup of the sales database.
+-- Command to run in the system terminal:
+-- mysqldump -u root -p sales > sales_backup.sql
+--
+-- Explanation:
+-- -u root selects the MySQL root account.
+-- -p prompts for the password (the password is not written
+--    directly in the command).
+-- sales selects the database to back up.
+-- > sales_backup.sql writes the complete dump to this file.
+-- The dump normally includes table definitions and data.
+-- Regular backups help recover from accidental deletion,
+-- corruption, failed updates, and hardware or software failure.
+
+-- Question 2: Back up every database on the MySQL server.
+-- Command to run in the system terminal:
+-- mysqldump -u root -p --all-databases > all_databases_backup.sql
+--
+-- Explanation:
+-- --all-databases exports all databases accessible to the
+--    account, including their structures and data.
+-- Backing up all databases before migration helps preserve
+-- the server's databases for transfer and recovery on the
+-- destination server. Review users, privileges, and server
+-- configuration separately as required by your migration.
